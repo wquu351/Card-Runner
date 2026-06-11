@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://ui/active_skill_bar.gd" id="1"]
+
+[node name="ActiveSkillBar" type="Control"]
+layout_mode = 0
+offset_right = 309.0
+offset_bottom = 75.0
+script = ExtResource("1")

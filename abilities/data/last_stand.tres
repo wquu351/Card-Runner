@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://abilities/ability_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+ability_id = "last_stand"
+display_name = "最后一搏"
+description = "致命伤害时免死并获得20点生命值"
+rarity = 3
+stackable = false
+max_stacks = 1
+effect_type = 3
+target_attribute = "last_stand"
+effect_value = 0.0

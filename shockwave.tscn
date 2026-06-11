@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://shock001"]
+
+[ext_resource type="Script" uid="uid://shockgd001" path="res://shockwave.gd" id="1_shock"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(200, 60)
+
+[node name="Shockwave" type="Area2D"]
+script = ExtResource("1_shock")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1")

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://abilities/ability_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+ability_id = "score_pouch"
+display_name = "得分锦囊"
+description = "分数倍率 +30%/层"
+rarity = 0
+stackable = true
+max_stacks = 3
+effect_type = 1
+target_attribute = "score_multiplier"
+effect_value = 0.30

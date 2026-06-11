@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://abilities/ability_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+ability_id = "flawless_challenge"
+display_name = "无伤挑战者"
+description = "8秒不受伤获得得分+150%加成"
+rarity = 2
+stackable = false
+max_stacks = 1
+effect_type = 3
+target_attribute = "flawless_challenge"
+effect_value = 0.0

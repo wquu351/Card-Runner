@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://abilities/ability_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+ability_id = "satellite"
+display_name = "伙伴卫星"
+description = "环绕玩家的自动防御卫星，可叠加双层"
+rarity = 2
+stackable = true
+max_stacks = 2
+effect_type = 3
+target_attribute = "satellite"
+effect_value = 0.0

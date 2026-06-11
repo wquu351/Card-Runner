@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://abilities/ability_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+ability_id = "lucky_rabbit_foot"
+display_name = "小小小plus"
+description = "碰撞体缩小30%，首个能力额外缩小15%（不可升级）"
+rarity = 1
+stackable = false
+max_stacks = 1
+effect_type = 0
+target_attribute = "collision_scale"
+effect_value = 0.7

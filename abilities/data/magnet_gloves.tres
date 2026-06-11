@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://abilities/ability_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+ability_id = "magnet_gloves"
+display_name = "磁铁手套"
+description = "带有磁力的手套，吸引附近的分数（不可升级）"
+rarity = 0
+stackable = false
+max_stacks = 1
+effect_type = 3
+target_attribute = "magnet"
+effect_value = 0.0

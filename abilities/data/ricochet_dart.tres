@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://abilities/ability_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+ability_id = "ricochet_dart"
+display_name = "弹射飞镖"
+description = "每隔6秒自动发射飞镖，在障碍物间弹射，最多摧毁4个"
+rarity = 1
+stackable = false
+max_stacks = 1
+effect_type = 3
+target_attribute = "ricochet_dart"
+effect_value = 0.0

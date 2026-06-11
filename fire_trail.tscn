@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://fire001"]
+
+[ext_resource type="Script" uid="uid://firegd001" path="res://fire_trail.gd" id="1_fire"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(40, 50)
+
+[node name="FireTrail" type="Area2D" groups=["fire_trails"]]
+script = ExtResource("1_fire")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1")

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://abilities/ability_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+ability_id = "auto_dodge"
+display_name = "轻盈闪避"
+description = "附近有障碍物时自动闪避到别的赛道，0.2秒无敌虚化状态，冷却5秒"
+rarity = 1
+stackable = false
+max_stacks = 1
+effect_type = 3
+target_attribute = "auto_dodge"
+effect_value = 0.0

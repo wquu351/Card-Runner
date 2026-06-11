@@ -1,0 +1,159 @@
+[gd_scene format=3 uid="uid://4nc51h1dj4pl"]
+
+[ext_resource type="Script" uid="uid://cjlyyacciidlv" path="res://main.gd" id="1_main"]
+[ext_resource type="Script" uid="uid://bk7343cpvduys" path="res://player.gd" id="2_player"]
+[ext_resource type="Script" uid="uid://h7yj47c8ux1b" path="res://obstacle_spawner.gd" id="3_spawner"]
+[ext_resource type="Script" uid="uid://boii6053iquv2" path="res://game_manager.gd" id="4_manager"]
+[ext_resource type="PackedScene" uid="uid://cardui001" path="res://ui/card_selection/card_selection_ui.tscn" id="5_card_ui"]
+[ext_resource type="Script" uid="uid://beoj38e2o3o7m" path="res://line_2d.gd" id="5_efxa6"]
+[ext_resource type="Script" uid="uid://3s8581a46o53" path="res://systems/upgrade_trigger.gd" id="6_trigger"]
+[ext_resource type="Script" uid="uid://ciexwb63nbqlj" path="res://ui/ability_hud.gd" id="7_hud"]
+[ext_resource type="PackedScene" path="res://ui/pause/pause_menu.tscn" id="8_pause"]
+[ext_resource type="Script" uid="uid://svox51bj453e" path="res://ui/card_progress.gd" id="9_card_progress"]
+[ext_resource type="PackedScene" path="res://ui/skill_bar.tscn" id="10_skill_bar"]
+[ext_resource type="Script" uid="uid://b3bihpbg866fr" path="res://light_trail.gd" id="11_light_trail"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(64, 64)
+
+[node name="RunnerGame" type="Node2D" unique_id=1947784107]
+script = ExtResource("1_main")
+
+[node name="Background" type="Sprite2D" parent="." unique_id=1596720908]
+position = Vector2(270, 585)
+
+[node name="ScoreLabel" type="Label" parent="." unique_id=987654321]
+z_index = 50
+offset_left = 67.0
+offset_top = 158.0
+offset_right = 255.0
+offset_bottom = 198.0
+theme_override_colors/font_color = Color(1, 0.9, 0.3, 1)
+theme_override_colors/font_outline_color = Color(0.2, 0.1, 0, 1)
+theme_override_constants/outline_size = 4
+theme_override_font_sizes/font_size = 28
+text = "Score: 0"
+
+[node name="ComboLabel" type="Label" parent="." unique_id=888999000]
+z_index = 50
+offset_left = 12.0
+offset_top = 55.0
+offset_right = 180.0
+offset_bottom = 79.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_colors/font_color = Color(1, 0.6, 0.2, 1)
+theme_override_colors/font_outline_color = Color(0.3, 0.1, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+
+[node name="LivesLabel" type="Label" parent="." unique_id=1503058010]
+z_index = 50
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 294.0
+offset_top = 35.0
+offset_right = 441.0
+offset_bottom = 71.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 0.3, 0.3, 1)
+theme_override_colors/font_outline_color = Color(0.2, 0, 0, 1)
+theme_override_constants/outline_size = 3
+theme_override_font_sizes/font_size = 24
+text = "HP 1/1"
+
+[node name="RecoveryLabel" type="Label" parent="." unique_id=682965988]
+z_index = 50
+anchors_preset = 1
+anchor_left = 1.0
+anchor_right = 1.0
+offset_left = 302.0
+offset_top = 82.0
+offset_right = 414.0
+offset_bottom = 106.0
+grow_horizontal = 0
+theme_override_colors/font_color = Color(1, 0.6, 0.6, 0.8)
+theme_override_colors/font_outline_color = Color(0.2, 0, 0, 1)
+theme_override_constants/outline_size = 2
+theme_override_font_sizes/font_size = 14
+
+[node name="CardProgressUI" type="Control" parent="." unique_id=556677889]
+layout_mode = 3
+anchors_preset = 2
+anchor_top = 1.0
+anchor_bottom = 1.0
+offset_left = 4.0
+offset_top = -500.0
+offset_right = 40.0
+offset_bottom = -16.0
+grow_horizontal = 2
+grow_vertical = 0
+script = ExtResource("9_card_progress")
+
+[node name="CardProgressBar" type="ProgressBar" parent="CardProgressUI" unique_id=1969417393]
+layout_mode = 0
+offset_left = 17.0
+offset_top = 584.0
+offset_right = 49.0
+offset_bottom = 1046.0
+max_value = 1.0
+fill_mode = 3
+show_percentage = false
+
+[node name="ProgressLabel" type="Label" parent="CardProgressUI" unique_id=236748352]
+layout_mode = 0
+offset_left = 9.0
+offset_top = 553.0
+offset_right = 55.0
+offset_bottom = 573.0
+theme_override_colors/font_color = Color(0.8, 0.85, 1, 0.9)
+theme_override_font_sizes/font_size = 14
+text = "选卡"
+
+[node name="AbilityHUD" type="Control" parent="." unique_id=1253012021]
+layout_mode = 3
+anchors_preset = 0
+offset_left = 8.0
+offset_top = 75.0
+offset_right = 250.0
+offset_bottom = 240.0
+script = ExtResource("7_hud")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="AbilityHUD" unique_id=1704731249]
+layout_mode = 0
+anchor_right = 1.0
+anchor_bottom = 1.0
+theme_override_constants/separation = 4
+
+[node name="Player" type="CharacterBody2D" parent="." unique_id=705520318]
+position = Vector2(270, 1050)
+script = ExtResource("2_player")
+
+[node name="Sprite2D" type="Sprite2D" parent="Player" unique_id=271391528]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Player" unique_id=2010546910]
+shape = SubResource("RectangleShape2D_1")
+
+[node name="TailLine" type="Line2D" parent="Player" unique_id=756090462]
+width = 4.0
+script = ExtResource("5_efxa6")
+
+[node name="LightTrail" type="Node2D" parent="Player" unique_id=123456789]
+script = ExtResource("11_light_trail")
+
+[node name="ObstacleSpawner" type="Node2D" parent="." unique_id=111222333]
+script = ExtResource("3_spawner")
+
+[node name="GameManager" type="Node" parent="." unique_id=444555666]
+script = ExtResource("4_manager")
+
+[node name="UpgradeTrigger" type="Node" parent="." unique_id=777888999]
+script = ExtResource("6_trigger")
+
+[node name="CardSelectionUI" parent="." unique_id=1171913422 instance=ExtResource("5_card_ui")]
+
+[node name="PauseMenu" parent="." unique_id=503535078 instance=ExtResource("8_pause")]
+
+[node name="SkillBar" parent="." unique_id=1526751748 instance=ExtResource("10_skill_bar")]
+z_index = 100

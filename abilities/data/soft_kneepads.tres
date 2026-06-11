@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://abilities/ability_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+ability_id = "soft_kneepads"
+display_name = "快快变小"
+description = "碰撞体越来越小，更容易躲避障碍"
+rarity = 0
+stackable = true
+max_stacks = 5
+effect_type = 0
+target_attribute = "collision_scale"
+effect_value = 0.8

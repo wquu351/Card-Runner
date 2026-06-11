@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://abilities/ability_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+ability_id = "mirror_shield"
+display_name = "镜之盾"
+description = "头顶3段护盾条，每段抵挡一次伤害，每8秒恢复一段"
+rarity = 2
+stackable = false
+max_stacks = 1
+effect_type = 3
+target_attribute = "mirror_shield"
+effect_value = 0.0

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://abilities/ability_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+ability_id = "decoy"
+display_name = "替身假人"
+description = "在轨道上创造假人，吸收周围障碍物3秒，角色无敌3秒。冷却10秒"
+rarity = 1
+stackable = false
+max_stacks = 1
+effect_type = 3
+target_attribute = "decoy"
+effect_value = 0.0

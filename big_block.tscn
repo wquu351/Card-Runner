@@ -1,0 +1,18 @@
+[gd_scene format=3 uid="uid://bigblock12345"]
+
+[ext_resource type="Script" path="res://big_block.gd" id="1_big_block"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(100, 60)
+
+[node name="BigBlock" type="Area2D"]
+collision_layer = 1
+collision_mask = 1
+script = ExtResource("1_big_block")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

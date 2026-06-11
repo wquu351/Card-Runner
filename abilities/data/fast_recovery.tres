@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://abilities/ability_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+ability_id = "fast_recovery"
+display_name = "快速愈合"
+description = "加快生命恢复速度"
+rarity = 0
+stackable = true
+max_stacks = 3
+effect_type = 3
+target_attribute = "fast_recovery"
+effect_value = 0.0

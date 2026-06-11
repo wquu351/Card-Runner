@@ -1,0 +1,18 @@
+[gd_scene load_steps=3 format=3 uid="uid://cobsacle12345"]
+
+[ext_resource type="Script" path="res://obstacle.gd" id="1_obstacle"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(50, 60)
+
+[node name="Obstacle" type="Area2D"]
+collision_layer = 1
+collision_mask = 1
+script = ExtResource("1_obstacle")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1")
+
+[connection signal="body_entered" from="." to="." method="_on_body_entered"]

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://abilities/ability_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+ability_id = "phoenix_reborn"
+display_name = "凤凰涅槃"
+description = "死亡时原地复活，恢复满生命值，释放全屏冲击波摧毁所有障碍物。每15秒可获得一次。"
+rarity = 3
+stackable = false
+max_stacks = 1
+effect_type = 3
+target_attribute = "phoenix_reborn"
+effect_value = 0.0

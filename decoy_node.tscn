@@ -1,0 +1,14 @@
+[gd_scene format=3 uid="uid://decoy001"]
+
+[ext_resource type="Script" uid="uid://decoygd001" path="res://decoy_node.gd" id="1_decoy"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_1"]
+size = Vector2(64, 64)
+
+[node name="DecoyNode" type="Area2D" groups=["decoys"]]
+script = ExtResource("1_decoy")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_1")

@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://abilities/ability_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+ability_id = "coin_bonus"
+display_name = "金币加成"
+description = "每收集一个金币，分数倍率永久+0.02"
+rarity = 0
+stackable = false
+max_stacks = 1
+effect_type = 3
+target_attribute = ""
+effect_value = 0.02

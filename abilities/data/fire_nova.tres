@@ -1,0 +1,15 @@
+[gd_resource type="Resource" script_class="AbilityData" load_steps=2 format=3]
+
+[ext_resource type="Script" path="res://abilities/ability_data.gd" id="1"]
+
+[resource]
+script = ExtResource("1")
+ability_id = "fire_nova"
+display_name = "火焰新星"
+description = "每6秒自动释放火焰新星，向外扩散摧毁障碍物"
+rarity = 1
+stackable = false
+max_stacks = 1
+effect_type = 3
+target_attribute = "fire_nova"
+effect_value = 0.0
