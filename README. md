@@ -1,0 +1,13 @@
+# 卡牌跑者（Card Runner）
+一款带有卡牌选择功能的2D跑酷游戏，使用 Godot 4.6.2 开发。
+
+## 游戏介绍
+玩家可以通过卡牌选择不同的技能，在跑酷过程中挑战关卡。
+
+## 运行方式
+1.  安装 Godot 4.6.2 或以上版本：https://godotengine.org/download/
+2.  克隆本仓库：`git clone https://github.com/WQUU351/卡牌跑者.git`
+3.  在 Godot 中导入项目文件夹，打开 `project.godot` 即可运行
+
+## 许可证
+本项目使用 MIT 许可证，详见 [LICENSE](LICENSE) 文件。
